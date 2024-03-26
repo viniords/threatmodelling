@@ -1,0 +1,749 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "theath modeling",
+    "owner": "L2GBM",
+    "description": "hard system comtemple",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "WEB SERVER",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": -860,
+              "y": -558
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "portal web"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "id": "a19af006-7cc7-409a-9814-e4f1d9ac6fe1",
+            "data": {
+              "type": "tm.Actor",
+              "name": "portal web",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "credencial usuario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "63d78498-126c-4bbd-8f90-626f6c529780",
+            "labels": [
+              "credencial usuario"
+            ],
+            "source": {
+              "x": -850,
+              "y": -498
+            },
+            "target": {
+              "cell": "7b92a9b2-7f57-4f94-8d62-657db36a239b"
+            },
+            "vertices": [
+              {
+                "x": -920,
+                "y": -418
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "8e36ecf8-81db-428b-a449-709368247d73",
+            "labels": [
+              "response"
+            ],
+            "source": {
+              "cell": "5253669c-67e1-4a4d-bae1-9f1e738a9b2d"
+            },
+            "target": {
+              "cell": "a19af006-7cc7-409a-9814-e4f1d9ac6fe1"
+            },
+            "vertices": [
+              {
+                "x": -830,
+                "y": -428
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "armazenamento de dados",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "078fbdd5-f680-4801-a06e-ee80b7eab544",
+            "labels": [
+              "armazenamento de dados"
+            ],
+            "source": {
+              "cell": "5c3c4d08-9962-47ac-8192-2da1fc430e61"
+            },
+            "target": {
+              "cell": "17d1e417-afb2-445e-a43d-f78ef754816a"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "290f047b-35f0-4b8b-9b05-4fd7df3fe54d",
+                  "title": "XSS",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": " Os ataques XSS ocorrem quando um atacante consegue injetar scripts maliciosos (geralmente JavaScript) em páginas da web vistas por outros usuários. Isso pode acontecer através da inserção de scripts maliciosos em campos de entrada, como formulários, que são então exibidos para outros usuários que acessam a página.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "8e3c8250-8aa2-4bee-985d-dc55069980ef",
+            "labels": [
+              "request"
+            ],
+            "source": {
+              "cell": "a19af006-7cc7-409a-9814-e4f1d9ac6fe1"
+            },
+            "target": {
+              "cell": "5253669c-67e1-4a4d-bae1-9f1e738a9b2d"
+            },
+            "vertices": [
+              {
+                "x": -760,
+                "y": -428
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "input usuario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "a587203e-85ef-4d53-abfc-3573e4fb5477",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "A injeção de SQL é uma vulnerabilidade que ocorre quando um aplicativo da web não valida corretamente as entradas do usuário e permite que um invasor insira comandos SQL maliciosos em campos de entrada de texto. Esses comandos SQL podem ser executados pelo banco de dados subjacente, o que pode resultar na manipulação ou comprometimento dos dados armazenados, bem como na execução de comandos não autorizados.",
+                  "mitigation": "Mitigação (medidas): Validação de Entrada, Uso de Listas de Permissões (Whitelists), entre outros.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "69724e80-bb4c-4ef9-bfdd-b6eba5e8bfab",
+            "labels": [
+              "input usuario"
+            ],
+            "source": {
+              "cell": "a19af006-7cc7-409a-9814-e4f1d9ac6fe1"
+            },
+            "target": {
+              "cell": "5c3c4d08-9962-47ac-8192-2da1fc430e61"
+            },
+            "vertices": [
+              {
+                "x": -730,
+                "y": -478
+              },
+              {
+                "x": -680,
+                "y": -448
+              },
+              {
+                "x": -660,
+                "y": -448
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "autenticação",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "73b60689-b9b8-4795-88bc-bea84b80169d",
+            "labels": [
+              "autenticação"
+            ],
+            "source": {
+              "cell": "7b92a9b2-7f57-4f94-8d62-657db36a239b"
+            },
+            "target": {
+              "x": -850,
+              "y": -328
+            },
+            "vertices": [
+              {
+                "x": -930,
+                "y": -327
+              },
+              {
+                "x": -910,
+                "y": -327
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "726b3445-2194-4090-ab51-f4597a08c2e2",
+                  "title": " DDoS (Distributed Denial of Service)",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Um ataque de negação de serviço distribuído (DDoS) é uma forma de ataque cibernético projetada para sobrecarregar os recursos de um servidor, rede ou serviço online, tornando-o inacessível para usuários legítimos. No DDoS, uma grande quantidade de tráfego malicioso é direcionada de múltiplas fontes para o alvo, sobrecarregando sua capacidade de processamento e largura de banda. Este tipo de ataque é geralmente conduzido por uma rede de computadores comprometidos, conhecidos como botnets, controlados pelo invasor.",
+                  "mitigation": "Mitigação: Uso de firewall, Serviços de proteção terceirizado, Balanceamento de Carga, entre outros.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "c5888a63-b0bb-449a-99b0-979a9e356d0d",
+            "labels": [
+              "request"
+            ],
+            "source": {
+              "cell": "d326134c-0d58-46f7-ad7c-67ffab98d074"
+            },
+            "target": {
+              "cell": "a19af006-7cc7-409a-9814-e4f1d9ac6fe1"
+            },
+            "vertices": [
+              {
+                "x": -940,
+                "y": -498
+              },
+              {
+                "x": -900,
+                "y": -498
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "6b18c933-c980-4ca4-922e-324b47863dd8",
+                  "title": "men-in-the-middle",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "O ataque conhecido como \"man-in-the-middle\" (homem no meio) é uma técnica cibernética na qual um indivíduo mal-intencionado insere-se secretamente entre duas partes que estão se comunicando, sem que nenhuma delas perceba. Essencialmente, o atacante torna-se um intermediário invisível, interceptando e potencialmente manipulando as comunicações entre as partes legítimas.",
+                  "mitigation": "Mitigação: Uso de Criptografia, Certificado Digital, Redes Seguras, entre outros.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "18a12ecc-8695-44eb-9f48-1d8a7f565e9c",
+            "labels": [
+              "response"
+            ],
+            "source": {
+              "cell": "a19af006-7cc7-409a-9814-e4f1d9ac6fe1"
+            },
+            "target": {
+              "cell": "d326134c-0d58-46f7-ad7c-67ffab98d074"
+            },
+            "vertices": [
+              {
+                "x": -890,
+                "y": -550
+              },
+              {
+                "x": -940,
+                "y": -558
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": -1120,
+              "y": -558
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "usuario"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 11,
+            "id": "d326134c-0d58-46f7-ad7c-67ffab98d074",
+            "data": {
+              "type": "tm.Actor",
+              "name": "usuario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -340,
+              "y": -390
+            },
+            "size": {
+              "width": 150,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "database"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 13,
+            "id": "17d1e417-afb2-445e-a43d-f78ef754816a",
+            "data": {
+              "type": "tm.Store",
+              "name": "database",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "31d1a0e6-fe87-47e1-a49a-856fa144fb10",
+                  "title": "Database Tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "A vulnerabilidade de manipulação de dados em um banco de dados ocorre quando um atacante consegue modificar, adulterar ou excluir dados armazenados no banco de dados de forma não autorizada. Isso pode ser realizado através de métodos como injeção de SQL, acesso não autorizado aos sistemas de banco de dados ou exploração de vulnerabilidades nos sistemas de gerenciamento de banco de dados (DBMS).",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": -850,
+              "y": -360
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "servidor"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 14,
+            "id": "5253669c-67e1-4a4d-bae1-9f1e738a9b2d",
+            "data": {
+              "type": "tm.Actor",
+              "name": "servidor",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "583dd58a-2aad-4188-9fbe-764b2b5d273f",
+                  "title": "IP Address Spoofing",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "A falsificação de endereço IP envolve a falsificação do endereço IP de origem em pacotes de rede para se passar por outra entidade ou ocultar a identidade do atacante. Isso pode ser explorado para contornar controles de acesso, lançar ataques de negação de serviço distribuídos (DDoS) ou conduzir reconhecimento sem detecção.",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": -1118.75,
+              "y": -370
+            },
+            "size": {
+              "width": 110,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "autenticador"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 15,
+            "id": "7b92a9b2-7f57-4f94-8d62-657db36a239b",
+            "data": {
+              "type": "tm.Process",
+              "name": "autenticador",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "100dd103-3d96-421d-bb18-133fe32073d1",
+                  "title": "Brute Force",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "O brute force é uma técnica de ataque cibernético em que um invasor tenta forçadamente todas as combinações possíveis de senhas ou chaves de criptografia até encontrar a correta. Essa abordagem é caracterizada por sua simplicidade e é geralmente usada quando não há outras formas de acesso disponíveis. O atacante utiliza programas automatizados que tentam uma ampla variedade de combinações em rápida sucessão, com o objetivo de encontrar a senha correta que permita o acesso não autorizado a sistemas, contas ou dados sensíveis.",
+                  "mitigation": "Mitigação: Criação de Políticas de senha fortes, Bloqueio de contas, Autenticação de dois fatores (2FA), Monitoramento de logs de login, etc.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": -640,
+              "y": -470
+            },
+            "size": {
+              "width": 180,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "entrada de texto"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 16,
+            "id": "5c3c4d08-9962-47ac-8192-2da1fc430e61",
+            "data": {
+              "type": "tm.Process",
+              "name": "entrada de texto",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          }
+        ],
+        "description": "L2GBM"
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 13
+  }
+}
